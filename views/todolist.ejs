@@ -6,7 +6,25 @@
   </head>
   <body>
     <h1>부산일과학고 학사일정 관리 사이트</h1>
-    <h2><%= query_grade %>학년</h2>
-    <h2><%= query_class %>반</h2>
+    <form action="/todolist" method="get">
+      <select name="grade">
+        <% for(i = 1; i <= 3; i++) { %>
+          <% if(i == query_grade) {%>
+            <option value= <%=i %> selected ><%=i %>학년</option>
+          <% } else { %>
+            <option value= <%=i %>><%=i %>학년</option>
+          <% } %>
+        <% } %>
+      </select>
+      <select name="class">
+        <% for(i = 1; i <= 5; i++) { %>
+          <% if(i == query_class) { %>
+            <option value= <%=i %> selected ><%=i %>반</option>
+          <% } else { %>
+            <option value= <%=i %>><%=i %>반</option>
+          <% } %>
+        <% } %>
+      <input type="submit" value="검색"/>
+    </form>
   </body>
 </html>
