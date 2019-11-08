@@ -8,7 +8,7 @@
     <h1>부산일과학고 학사일정 관리 사이트</h1>
     <form action="/todolist" method="get">
       <select name="grade">
-        <% for(i = 1; i <= 3; i++) { %>
+        <% for(let i of grades) { %>
           <% if(i == query_grade) {%>
             <option value= <%=i %> selected ><%=i %>학년</option>
           <% } else { %>
@@ -17,7 +17,7 @@
         <% } %>
       </select>
       <select name="class">
-        <% for(i = 1; i <= 5; i++) { %>
+        <% for(let i of classes) { %>
           <% if(i == query_class) { %>
             <option value= <%=i %> selected ><%=i %>반</option>
           <% } else { %>
