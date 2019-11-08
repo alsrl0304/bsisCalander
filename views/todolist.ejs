@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>부산일과학고 학사일정 관리 사이트</h1>
+    <a href="/">BSIS_TODO</a>
     <form action="/todolist" method="get">
       <select name="grade">
         <% for(let i of grades) { %>
@@ -26,5 +26,6 @@
         <% } %>
       <input type="submit" value="검색"/>
     </form>
+    <h2>요청 결과</h2>
   </body>
 </html>
