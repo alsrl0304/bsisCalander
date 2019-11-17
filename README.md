@@ -3,6 +3,7 @@
 ## 기본 사항
 
 ### 사용 플랫폼 버전
+- Raspbian Buster
 - Node.js 12.13.0 LTS
 - MariaDB 10.0.38 (업그레이드 예정)
 
