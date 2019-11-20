@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     subject: {
       type: DataTypes.STRING(10),
       allowNull: false
-    }
+    },
     grade: {
       type: DataTypes.INTEGER,
       allowNull: false
