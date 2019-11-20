@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     class_num: {
       type: DataTypes.INTEGER,
       allowNull: false
-    }
+    },
     deadline: {
       type: DataTypes.DATE,
       allowNull: false
