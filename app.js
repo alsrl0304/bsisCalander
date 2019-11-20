@@ -3,11 +3,22 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const { sequelize } = require('./models/index.js');
 
 const indexRouter = require('./routes/index');
 const todolistRouter = require('./routes/todolist');
 
 const app = express();
+
+const sequelizeDriver = async () => {
+  try {
+    await sequelize.sync();
+    console.log('Sequelize Init Complete.')
+  } catch (err) {
+    console.error('Sequelize Init Failed.', err)
+  }
+}
+sequelizeDriver();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

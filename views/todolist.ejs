@@ -26,6 +26,30 @@
         <% } %>
       <input type="submit" value="검색"/>
     </form>
-    <h2>조회 결과</h2>
+    <h3>조회 결과</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>내용</th>
+          <th>과목</th>
+          <th>학년</th>
+          <th>반</th>
+          <th>기한</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let todo of todolist) { %>
+          <tr>
+            <td><%= todo.title %></td>
+            <td><%= todo.description %></td>
+            <td><%= todo.subject %></td>
+            <td><%= todo.grade %></td>
+            <td><%= todo.class_num %></td>
+            <td><%= todo.deadline %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
   </body>
 </html>
