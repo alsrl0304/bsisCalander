@@ -3,7 +3,7 @@
     "username": "bsisTodo_DEV",
     "password": "bsisTodo_DEV",
     "database": "bsis_todo",
-    "host": "localhost",
+    "host": "localhost:3952",
     "dialect": "mariadb",
     "operatorsAliases": false
   },
