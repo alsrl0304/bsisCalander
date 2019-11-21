@@ -5,7 +5,7 @@
 ### 사용 플랫폼 버전
 - Raspberry PI 3B, Raspbian Buster
 - Node.js 12.13.0 LTS
-- MariaDB 10.0.38 (업그레이드 예정)
+- MariaDB 10.3.17
 
 ### 프로젝트 디렉터리 계층도
 - package.json: 프로젝트 정보, 의존성 정의
