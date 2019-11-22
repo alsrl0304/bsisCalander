@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <a href="/">BSIS_TODO</a>
+    <h1><a href="/", style="text-decoration: none;">BSIS_TODO</a></h1>
     <form action="/todolist" method="get">
       <select name="grade">
         <% for(let i of grades) { %>
@@ -45,7 +45,7 @@
             <td><%= todo.description %></td>
             <td><%= todo.subject %></td>
             <td><%= todo.grade %></td>
-            <td><%= todo.class_num %></td>
+            <td><%= todo.class %></td>
             <td><%= todo.deadline %></td>
           </tr>
         <% } %>

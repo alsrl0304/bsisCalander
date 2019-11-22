@@ -8,7 +8,13 @@ router.get('/', function(req, res, next) {
   const query_grade = req.query.grade;
   const query_class = req.query.class;
 
-  Todo.findAll()
+  Todo.findAll( {
+    attributes: ['title', 'description', 'subject', 'grade', 'class', 'deadline'],
+    where: {
+      grade: query_grade,
+      class: query_class
+    }
+  })
   .then((todolist) => {
     res.render('todolist', { title: 'BSIS_TODO_LIST',
       grades, classes,
