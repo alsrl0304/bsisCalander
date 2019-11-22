@@ -5,7 +5,8 @@
     "database": "bsisTodo_DEV",
     "host": "localhost",
     "dialect": "mariadb",
-    "timezone": "Etc/GMT9",
-    "operatorsAliases": false
+    "define": {
+      "timezone": "Etc/GMT9"
+    }
   }
 }

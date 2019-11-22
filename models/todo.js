@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    class_num: {
+    class: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
@@ -31,4 +31,4 @@ module.exports = (sequelize, DataTypes) => {
     charset: 'utf8',
     collate: 'utf8_general_ci'
   })
-}
+};
