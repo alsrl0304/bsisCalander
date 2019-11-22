@@ -1,26 +1,11 @@
 {
   "development": {
     "username": "bsisTodo_DEV",
-    "password": "bsisTodo_DEV",
-    "database": "bsis_todo",
-    "host": "localhost:3952",
+    "password": "bsishelloworld08",
+    "database": "bsisTodo_DEV",
+    "host": "localhost",
     "dialect": "mariadb",
-    "operatorsAliases": false
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
+    "timezone": "Etc/GMT9",
     "operatorsAliases": false
   }
 }
