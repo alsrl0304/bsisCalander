@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><a href="/", style="text-decoration: none;">BSIS_TODO</a></h1>
+    <h2>일정 추가</h2>
+    <form action="/createTodo" method="post">
+      Title: <br>
+      <input type="text" name="title"><br>
+      Description: <br>
+      <textarea name="description" rows="8" cols="80"></textarea>
+      <br>
+      Subject: <br>
+      <input type="text" name="subject"><br>
+      <br>
+      <br>
+      Grade/Class: <br>
+      <select name="grade">
+        <% for(let i of grades) { %>
+          <option value= <%=i %>><%=i %>학년</option>
+        <% } %>
+      </select>
+      <select name="class">
+        <% for(let i of classes) { %>
+          <option value= <%=i %>><%=i %>반</option>
+        <% } %>
+      </select>
+      <br>
+      <br>
+      Deadline: <br>
+      <input type="datetime-local" name="deadline"><br>
+      <input type="submit" value="추가"/>
+    </form>
+  </body>
+</html>

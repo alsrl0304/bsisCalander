@@ -7,6 +7,7 @@ const sequelize = require('./models').sequelize;
 
 const indexRouter = require('./routes/index');
 const todolistRouter = require('./routes/todolist');
+const createTodoRouter = require('./routes/createTodo')
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/todolist', todolistRouter);
+app.use('/createTodo', createTodoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

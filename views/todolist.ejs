@@ -31,22 +31,18 @@
       <thead>
         <tr>
           <th>이름</th>
-          <th>내용</th>
           <th>과목</th>
-          <th>학년</th>
-          <th>반</th>
           <th>기한</th>
+          <th>내용</th>
         </tr>
       </thead>
       <tbody>
         <% for(let todo of todolist) { %>
           <tr>
-            <td><%= todo.title %></td>
-            <td><%= todo.description %></td>
-            <td><%= todo.subject %></td>
-            <td><%= todo.grade %></td>
-            <td><%= todo.class %></td>
+            <td><%= JSON.parse(todo.title) %></td>
+            <td><%= JSON.parse(todo.subject) %></td>
             <td><%= todo.deadline %></td>
+            <td><%= JSON.parse(todo.description) %></td>
           </tr>
         <% } %>
       </tbody>

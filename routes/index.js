@@ -3,7 +3,7 @@ const router = express.Router();
 const { grades, classes } = require('../module/schoolConstants');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   res.render('index', { title: 'BSIS_TODO' , grades, classes });
 });
 

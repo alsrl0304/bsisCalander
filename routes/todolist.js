@@ -4,7 +4,7 @@ const Todo = require('../models/index.js').Todo;
 const { grades, classes } = require('../module/schoolConstants');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   const query_grade = req.query.grade;
   const query_class = req.query.class;
 
