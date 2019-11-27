@@ -39,10 +39,10 @@
       <tbody>
         <% for(let todo of todolist) { %>
           <tr>
-            <td><%= JSON.parse(todo.title) %></td>
-            <td><%= JSON.parse(todo.subject) %></td>
+            <td><%= todo.title %></td>
+            <td><%= todo.subject %></td>
             <td><%= todo.deadline %></td>
-            <td><%= JSON.parse(todo.description) %></td>
+            <td><%= todo.description %></td>
           </tr>
         <% } %>
       </tbody>
