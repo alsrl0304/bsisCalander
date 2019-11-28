@@ -1,5 +1,9 @@
 const express = require('express');
 const router = express.Router();
+
+const moment = require('moment');
+moment.locale('ko');
+
 const Todo = require('../models/index.js').Todo;
 const { grades, classes } = require('../module/schoolConstants');
 
@@ -18,7 +22,8 @@ router.get('/', (req, res, next) => {
   .then((todolist) => {
     res.render('todolist', { title: 'BSIS_TODO_LIST',
       grades, classes,
-      query_grade, query_class, todolist });
+      query_grade, query_class, todolist,
+      moment });
   }).catch((err) => {
     console.error(err);
     next(err);

@@ -41,7 +41,7 @@
           <tr>
             <td><%= todo.title %></td>
             <td><%= todo.subject %></td>
-            <td><%= todo.deadline %></td>
+            <td><%= moment(todo.deadline).format('LLLL') %></td>
             <td><%= todo.description %></td>
           </tr>
         <% } %>

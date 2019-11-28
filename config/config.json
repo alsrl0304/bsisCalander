@@ -7,7 +7,7 @@
     "port": 3306,
     "dialect": "mariadb",
     "dialectOption": {
-      "timezone": "Etc/GMT9"
+      "timezone": "+Etc/GMT+9"
     }
   }
 }
