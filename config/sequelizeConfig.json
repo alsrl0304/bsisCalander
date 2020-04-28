@@ -1,13 +1,14 @@
 {
   "development": {
     "username": "bsisTodo_DEV",
-    "password": "bsishelloworld08",
+    "password": "bsisTodo_DEV",
     "database": "bsisTodo_DEV",
     "host": "localhost",
     "port": 3306,
     "dialect": "mariadb",
     "dialectOption": {
-      "timezone": "+Etc/GMT+9"
+      "useUTC": false,
+      "timezone": "Etc/GMT9"
     }
   }
 }
