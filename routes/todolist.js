@@ -5,7 +5,7 @@ const moment = require("moment");
 moment.locale("ko");
 
 const Todo = require("../models/index.js").Todo;
-const { grades, classes } = require("../constants/schoolConstants");
+const { grades, classes } = require("../src/scripts/schoolConstants");
 
 /* GET home page. */
 router.get("/", (req, res, next) => {
