@@ -5,9 +5,10 @@
   "scripts": {
     "transfile": "babel src/ -d dist/",
     "build": "webpack",
-    "start": "node bin/www"
+    "start": "npm run build & node bin/www"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "cookie-parser": "^1.4.5",
     "core-js": "^3.4.1",
     "debug": "~2.6.9",

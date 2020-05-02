@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import axios from "axios";
 
 const { grades, classes } = require("./schoolConstants.js");
 
@@ -22,12 +23,7 @@ class Selector extends React.Component {
   }
 
   handleSubmit(event) {
-    axios.get("/todolist", {
-      param: {
-        grade: this.state.grade,
-        class: this.state.class,
-      },
-    });
+    axios.get(`/api?grade=${this.state.grade}&class=${this.state.class}`);
   }
 
   render() {

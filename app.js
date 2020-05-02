@@ -9,6 +9,8 @@ const indexRouter = require("./routes/index");
 const todolistRouter = require("./routes/todolist");
 const createTodoRouter = require("./routes/createTodo");
 
+const apiRouter = require("./routes/api");
+
 const app = express();
 
 const sequelizeDriver = async () => {
@@ -30,11 +32,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "views")));
 
 app.use("/", indexRouter);
 app.use("/todolist", todolistRouter);
 app.use("/createTodo", createTodoRouter);
+
+app.use("/api", apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
