@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-import moment from "moment";
+
+import dayjs from "dayjs";
+import "dayjs/locale/ko";
+import dayjsLocalizedFormat from "dayjs/plugin/localizedFormat";
+dayjs.locale("ko");
+dayjs.extend(dayjsLocalizedFormat);
 
 import { getQueryParams } from "./tinyFunctions.js";
-
-moment().locale("ko");
-
 const { grades, classes } = require("./schoolConstants.js");
 
 class Selector extends React.Component {
@@ -62,10 +64,11 @@ class TodoTable extends React.Component {
       <tr key={todo.id}>
         <td>{todo.title}</td>
         <td>{todo.subject}</td>
-        <td>{moment(todo.deadline).format("LLLL")}</td>
+        <td>{dayjs(todo.deadline).format("LLLL")}</td>
         <td>{todo.description}</td>
       </tr>
     ));
+
     return (
       <div>
         <h3>조회 결과</h3>
