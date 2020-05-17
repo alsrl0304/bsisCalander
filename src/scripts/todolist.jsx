@@ -119,7 +119,13 @@ class Todolist extends React.Component {
       {
         [name]: value,
       },
-      () =>
+      () => {
+        if (typeof history.pushState == "function")
+          history.pushState(
+            null,
+            null,
+            `/todolist?grade=${this.state.grade}&class=${this.state.class}`
+          );
         axios
           .get(`/api?grade=${this.state.grade}&class=${this.state.class}`)
           .then((res) => {
@@ -127,7 +133,8 @@ class Todolist extends React.Component {
             this.setState({
               todolist: res.data,
             });
-          })
+          });
+      }
     );
   }
 

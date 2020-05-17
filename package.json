@@ -1,6 +1,6 @@
 {
   "name": "bsis-todo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "transfile": "babel src/ -d dist/",
@@ -20,7 +20,6 @@
     "http-errors": "^1.7.3",
     "mariadb": "^2.1.3",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.3",
     "sequelize": "^5.21.7"
   },
   "devDependencies": {
