@@ -8,7 +8,7 @@ import dayjsLocalizedFormat from "dayjs/plugin/localizedFormat";
 dayjs.locale("ko");
 dayjs.extend(dayjsLocalizedFormat);
 
-import { getQueryParams } from "./tinyFunctions.js";
+//import { getQueryParams } from "./tinyFunctions.js";
 const { grades, classes } = require("./schoolConstants.js");
 
 class Selector extends React.Component {
@@ -92,11 +92,11 @@ class Todolist extends React.Component {
   constructor(props) {
     super(props);
 
-    const url = window.location.href;
+    const params = new URLSearchParams(location.search);
 
     this.state = {
-      grade: getQueryParams("grade", url) || grades[0],
-      class: getQueryParams("class", url) || classes[0],
+      grade: params.get("grade") || grades[0],
+      class: params.get("class") || classes[0],
       todolist: [],
     };
 
@@ -120,12 +120,12 @@ class Todolist extends React.Component {
         [name]: value,
       },
       () => {
-        if (typeof history.pushState == "function")
-          history.pushState(
-            null,
-            null,
-            `/todolist?grade=${this.state.grade}&class=${this.state.class}`
-          );
+        history.replaceState(
+          null,
+          null,
+          `/todolist?grade=${this.state.grade}&class=${this.state.class}`
+        );
+
         axios
           .get(`/api?grade=${this.state.grade}&class=${this.state.class}`)
           .then((res) => {
