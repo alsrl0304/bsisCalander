@@ -4,6 +4,7 @@ module.exports = {
   entry: {
     index: "./src/scripts/index.jsx",
     todolist: "./src/scripts/todolist.jsx",
+    createTodo: "./src/scripts/createTodo.jsx",
   },
   output: {
     path: path.resolve(__dirname, "public/javascripts"),
